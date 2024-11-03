@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-heading-color: #3b3472;
+  --color-heading: #231d4f;
+  --color-button: #bb6bd9;
+  --color-text: #848199;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--color-text);
+  font-family: "poppins";
+}
+
+#wrapper {
+  background: rgb(150, 177, 198);
+  background: linear-gradient(
+    360deg,
+    rgba(150, 177, 198, 1) 0%,
+    rgba(225, 197, 211, 1) 23%,
+    rgba(225, 215, 213, 1) 42%
+  );
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+header .menu-icon {
+  color: var(--color-heading);
+  height: 31px;
+  margin-left: 15px;
+  width: 50px;
+}
+
+header #join-btn {
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 24px;
+  color: #fff;
+  margin-right: 15px;
+  padding: 10px 30px;
+}
+
+header #join-btn:hover {
+  background-color: #d1a1e2;
+}
+
+#intro {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#intro h1 {
+  color: var(--color-heading);
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+#intro-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.billing-options-tab {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  cursor: pointer;
+  display: flex;
+  font-weight: 300;
+  margin-top: 20px;
+  position: relative;
+}
+
+.billing-option {
+  color: var(--color-heading);
+  flex: 1;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.billing-option.active {
+  background-color: var(--color-button);
+  border-radius: 22px;
+  color: white;
+  padding: 10px;
+}
+
+#pricing {
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  gap: 33px;
+  margin: 64px 0;
+  padding: 15px;
+}
+
+.tier {
+  align-items: center;
+
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 500px;
+  padding: 10px;
+  width: 95%;
+}
+
+.popular-tier {
+  background-color: #231d4f;
+  color: #fff;
+  position: relative;
+}
+
+.popular-tier .price,
+.popular-tier .interval,
+.popular-tier .tier-name {
+  color: #fff;
+}
+
+.popular-tier .plan-btn {
+  background-color: var(--color-button);
+  color: #fff;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
+.popular-tier .plan-btn:hover,
+.popular-tier .plan-btn:active {
+  background-color: #d1a1e2;
+}
+
+.popular-tier-notice {
+  color: var(--color-button);
+  background-color: #403879;
+  border-radius: 13.5px;
+  font-weight: 600;
+  margin-right: 20px;
+  padding: 7px 16px;
+  position: absolute;
+  top: 10px;
+  text-transform: uppercase;
+  right: -10px;
+}
+
+.price {
+  color: var(--color-heading);
+  font-size: 36px;
+  margin: 35px 0 20px 0;
+}
+
+.interval {
+  color: var(--color-text);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.tier-name {
+  color: var(--color-heading);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.tagline {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.features {
+  list-style-type: none;
+}
+
+.features li {
+  margin: 8px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.features li::before {
+  align-items: center;
+  background-color: rgb(82, 67, 194, 0.15);
+  border-radius: 100%;
+  color: var(--color-button);
+  content: "✔";
+  display: flex;
+  font-size: 15px;
+  height: 20px;
+  justify-content: center;
+  left: 0;
+  padding: 1px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 21px;
+}
+
+.popular-tier .features li::before {
+  background-color: rgb(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.plan-btn {
+  background-color: #231d4f;
+  border: none;
+  border-radius: 24px;
+  color: #fff;
+  height: 45px;
+  margin-top: 27px;
+  opacity: 50%;
+  padding: 10px 65px;
+  transition: opacity 0.3s ease;
+}
+
+.plan-btn:hover,
+.plan-btn:active {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .tier {
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  #intro {
+    margin-bottom: 200px;
+  }
+
+  #pricing {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .tier {
+    width: 20%;
+  }
+
+  #intro-text {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .billing-options-tab {
+    margin: 0 0 0 55px;
+    width: 10%;
+  }
+}
